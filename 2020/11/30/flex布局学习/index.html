@@ -1,0 +1,243 @@
+
+<!DOCTYPE html>
+<html lang="en" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Flex布局学习 - Skytrajectory-白日梦想家</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="skytrajectory,"> 
+    <meta name="description" content="Flex布局学习
+1.flex优点
+移动端应用广泛
+PC端支持情况较差
+操作布局方便
+如果是PC端还是用传统布局，不考虑PC端兼容用flex弹性布局
+
+2.布局原理设置父盒子为flex后，子元素的f,"> 
+    <meta name="author" content="Skytrajectory"> 
+    <link rel="alternative" href="atom.xml" title="Skytrajectory-白日梦想家" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    
+    
+<link rel="stylesheet" href="/css/diaspora.css">
+
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-8691406134231910",
+              enable_page_level_ads: true
+         });
+    </script>
+    <script async custom-element="amp-auto-ads"
+        src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+    </script>
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body class="loading">
+    <span id="config-title" style="display:none">Skytrajectory-白日梦想家</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="https://skytrajectory.github.io"></a>
+    <div title="播放/暂停" class="iconfont icon-play"></div>
+    <h3 class="subtitle">Flex布局学习</h3>
+    <div class="social">
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="iconfont icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">Flex布局学习</h1>
+        <div class="stuff">
+            <span>十一月 30, 2020</span>
+            
+  <ul class="post-tags-list" itemprop="keywords"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/Flex/" rel="tag">Flex</a></li></ul>
+
+
+        </div>
+        <div class="content markdown">
+            <h1 id="Flex布局学习"><a href="#Flex布局学习" class="headerlink" title="Flex布局学习"></a>Flex布局学习</h1><hr>
+<h2 id="1-flex优点"><a href="#1-flex优点" class="headerlink" title="1.flex优点"></a>1.flex优点</h2><ul>
+<li>移动端应用广泛</li>
+<li>PC端支持情况较差</li>
+<li>操作布局方便</li>
+<li>如果是PC端还是用传统布局，不考虑PC端兼容用flex弹性布局</li>
+</ul>
+<h2 id="2-布局原理"><a href="#2-布局原理" class="headerlink" title="2.布局原理"></a>2.布局原理</h2><p>设置父盒子为flex后，子元素的float，clear，vertical-align属性将失效</p>
+<p>采用flex后，父亲叫flex容器，孩子叫flex项目，子元素可以横向排列也可以纵向排列</p>
+<h2 id="3-父项属性"><a href="#3-父项属性" class="headerlink" title="3.父项属性"></a>3.父项属性</h2><h3 id="1-flex-direction-：设置主轴方向"><a href="#1-flex-direction-：设置主轴方向" class="headerlink" title="1.flex-direction ：设置主轴方向"></a>1.flex-direction ：设置主轴方向</h3><p><img src="1606721851869.png" alt="1606721851869"></p>
+<p>以上为默认情况，元素跟着主轴排列</p>
+<p>要竖着排列元素，把主轴设置为Y轴</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">flex-direction</span><span class="selector-pseudo">:column</span></span><br><span class="line"><span class="selector-tag">flex-direction</span><span class="selector-pseudo">:row</span>（默认）</span><br><span class="line"><span class="selector-tag">flex-direction</span><span class="selector-pseudo">:column-reverse</span>（反转)</span><br><span class="line"><span class="selector-tag">flex-direction</span><span class="selector-pseudo">:row-reverse</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="2-justif-content-设置主轴上的子元素排列方式"><a href="#2-justif-content-设置主轴上的子元素排列方式" class="headerlink" title="2.justif-content 设置主轴上的子元素排列方式"></a>2.justif-content 设置主轴上的子元素排列方式</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">justif-content</span><span class="selector-pseudo">:flex-end</span> 从尾部开始</span><br><span class="line"><span class="selector-tag">justif-content</span><span class="selector-pseudo">:center</span> 居中</span><br><span class="line"><span class="selector-tag">justif-content</span><span class="selector-pseudo">:space-around</span> 平均分配剩余</span><br><span class="line"><span class="selector-tag">justif-content</span><span class="selector-pseudo">:space-between</span> 先两边贴边 再平分剩余空间 </span><br></pre></td></tr></table></figure>
+
+<p><img src="1606723022067.png" alt="1606723022067"></p>
+<p>justif-content:space-around 演示</p>
+<p><strong>重点space-between</strong> ::star:</p>
+<h3 id="3-flex-wrap设置子元素是否换行"><a href="#3-flex-wrap设置子元素是否换行" class="headerlink" title="3.flex-wrap设置子元素是否换行"></a>3.flex-wrap设置子元素是否换行</h3><p>默认情况，项目都排在一条线上，默认不换行</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">flex-wrap</span><span class="selector-pseudo">:nowrap(</span>默认)</span><br><span class="line"><span class="selector-tag">flex-wrap</span><span class="selector-pseudo">:wrap(</span>换行)</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-align-items设置侧轴上的子元素排列方式"><a href="#4-align-items设置侧轴上的子元素排列方式" class="headerlink" title="4.align-items设置侧轴上的子元素排列方式"></a>4.align-items设置侧轴上的子元素排列方式</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">align-items</span><span class="selector-pseudo">:flex-start(default)</span></span><br><span class="line"><span class="selector-tag">align-items</span><span class="selector-pseudo">:flex-end</span> 从下到上</span><br><span class="line"><span class="selector-tag">align-items</span><span class="selector-pseudo">:center</span> 配合<span class="selector-tag">justif-content</span><span class="selector-pseudo">:center</span>使用可以实现横纵居中</span><br><span class="line"><span class="selector-tag">align-items</span><span class="selector-pseudo">:stretch</span> 去掉子元素高度，沿着<span class="selector-tag">Y</span>轴拉伸</span><br></pre></td></tr></table></figure>
+
+<p><img src="1606744022754.png" alt="1606744022754"></p>
+<p><strong>若主轴是Y轴</strong>则以下方式居中</p>
+<p><img src="1606744067113.png" alt="1606744067113"></p>
+<h3 id="5-align-content只适用于换行（多行）的情况下"><a href="#5-align-content只适用于换行（多行）的情况下" class="headerlink" title="5.align-content只适用于换行（多行）的情况下"></a>5.align-content只适用于换行（多行）的情况下</h3><p>align-content和align-items的区别</p>
+<p><img src="1606744534041.png" alt="1606744534041"></p>
+<p><img src="1606745106720.png" alt="1606745106720"></p>
+<p>between是上下贴顶，剩下随机分配</p>
+<h3 id="6-flex-flow是flex-direction和flex-flow的简写"><a href="#6-flex-flow是flex-direction和flex-flow的简写" class="headerlink" title="6.flex-flow是flex-direction和flex-flow的简写"></a>6.flex-flow是flex-direction和flex-flow的简写</h3><p>flex-flow：row wrap;</p>
+<h2 id="子项属性"><a href="#子项属性" class="headerlink" title="子项属性"></a>子项属性</h2><hr>
+<h3 id="1-flex属性"><a href="#1-flex属性" class="headerlink" title="1.flex属性"></a>1.flex属性</h3><p>flex属性定义子项目分配剩余空间，用flex来表示占多少分，注意是剩余空间</p>
+<p><img src="1606745686878.png" alt="1606745686878"></p>
+<p>红蓝宽度设置好，绿色部分flex设置为1，自动填充</p>
+<p>若不设置宽度同一给样式，则会平均分配</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">flex</span><span class="selector-pseudo">:1</span>;</span><br></pre></td></tr></table></figure>
+
+<p>若是1:2:1的话，中间会占两份</p>
+<p><img src="1606746041634.png" alt="1606746041634"></p>
+<p>什么是剩余空间，你的宽度没有设置的都算剩余空间，</p>
+<h3 id="2-align-self"><a href="#2-align-self" class="headerlink" title="2.align-self"></a>2.align-self</h3><p>align-self可以控制子项在侧轴上排列的方式，自我脱节，控制哪个不合群</p>
+<h3 id="3-order"><a href="#3-order" class="headerlink" title="3.order"></a>3.order</h3><p>order属性定义项目的排列顺序</p>
+<p>数值越小越靠前，默认为0，调-1就可以调到前面去了</p>
+<p><img src="1606746487024.png" alt="1606746487024"></p>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="true">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        
+                            <li title='0' data-url='http://music.163.com/song/media/outer/url?id=1436614177.mp3'></li>
+                        
+                    
+                        
+                            <li title='1' data-url='http://music.163.com/song/media/outer/url?id=731250.mp3'></li>
+                        
+                    
+                        
+                            <li title='2' data-url='http://music.163.com/song/media/outer/url?id=729638.mp3'></li>
+                        
+                    
+                        
+                            <li title='3' data-url='http://music.163.com/song/media/outer/url?id=527479.mp3'></li>
+                        
+                    
+                        
+                            <li title='4' data-url='http://music.163.com/song/media/outer/url?id=1417631440.mp3'></li>
+                        
+                    
+                        
+                            <li title='5' data-url='http://music.163.com/song/media/outer/url?id=729835.mp3'></li>
+                        
+                    
+                </ul>
+            
+        </div>
+        
+    <div id='gitalk-container' class="comment link"
+		data-enable='false'
+        data-ae='true'
+        data-ci=''
+        data-cs=''
+        data-r=''
+        data-o=''
+        data-a=''
+        data-d='false'
+    >查看评论</div>
+
+
+    </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+
+
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/typed.js"></script>
+<script src="/js/diaspora.js"></script>
+
+
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+
+
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+</html>
