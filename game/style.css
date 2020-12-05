@@ -1,0 +1,37 @@
+.cell {
+    width: 260px;
+    height: 260px;
+    background-color:pink;
+    border: 1px solid black
+
+}
+.row {
+    display: flex;
+}
+h1 {
+    text-align: center;
+    margin-bottom: 100px;
+    font-size: 100px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+body{
+    background-color: cornsilk;
+}
+.x{
+    background-image: url(./x.png);
+}
+.o{
+    background-image: url(./o.png);
+}
+/* o是红色，x是绿色 */
+.oh div:hover{
+    background-image: url(./o.png);
+}
+.xh div:hover{
+    background-image: url(./x.png);
+}
