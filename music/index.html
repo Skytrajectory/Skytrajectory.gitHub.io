@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>音乐播放器</title>
+		<link rel="stylesheet" type="text/css" href="./css/index.css"/>
+	</head>
+	<body>
+		<div id="playbox">
+			<div class="search_bar">
+				<input type="text" autocomplete="on" v-model='query' @keyup.enter="searchMusic();" />
+			</div>
+			<div class="playbox_con">
+				<div class="info" v-if="searchState!=true">
+					<div>请输入你想听的歌手或者歌名,播放mv前先选定要播放的歌曲</div>
+				</div>
+				<div>
+					<ul class="song_list">
+						<li v-for="item in musicList" @click="playMusic(item.id)">
+						<b>{{ item.name }}</b> 
+						<span v-if="item.mvid!=0" @click="playMV(item.mvid)"><img src="./images/play.png" class="mvButton" alt=""></span>
+						</li>
+					</ul>
+				</div>
+				<div class="musicInfo" v-if="searchState!=false" :class="{playing:isPlay}">
+					<div class="player_con" >
+						<img src="images/disc.png" class="disc autoRotate" />
+						<img :src="musicCover" class="cover autoRotate"/>
+					</div>
+						<div class="comment_wrapper" v-if="searchState!=false">
+							<h5 class='title' >热门留言</h5>
+							<div class='comment_list'>
+							  <dl v-for="item in hotComments">
+								<dt><img :src="item.user.avatarUrl" alt=""></dt>
+								<dd class="name">{{ item.user.nickname }}</dd>
+								<dd class="detail">{{ item.content }}</dd>
+							  </dl>
+							</div>
+						  </div>
+						<audio ref='audio' @play="play" @pause="pause" :src="musicUrl" controls autoplay loop class="myaudio" id="playBar"></audio>
+						<div class="video_con" v-show="isShow" style="display: none;">
+							<video :src="mvUrl" controls="controls" id="mv"></video>
+							<div class="mask" @click="hide"></div>
+						</div>									
+				</div>
+			</div>
+		</div>	
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+		<script type="text/javascript" src="./js/main.js"></script>
+	</body>	
+</html>

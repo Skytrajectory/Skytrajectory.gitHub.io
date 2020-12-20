@@ -1,0 +1,239 @@
+body,
+ul,
+dl,
+dd {
+  margin: 0px;
+  padding: 0px;
+}
+/* 清除固定样式 */
+ul li{
+  list-style: none;
+}
+body {
+	background: url("../images/bg.jpg") no-repeat;
+}
+#playbox {
+    width: 800px;
+    height: 544px;
+    position: fixed;
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    margin-left: -400px;
+    margin-top: -272px;
+    /* background-color: white */
+}
+
+.search_bar {
+  height: 60px;
+  background-color: #c20000;
+  /* 圆角边框 */
+  border-top-left-radius: 4px; 
+  border-top-right-radius: 4px;
+  display: flex;
+  align-items: center;/* 搜索栏上下居中 */
+  position: relative; 
+  z-index: 11;
+  justify-content: center;
+}
+
+.search_bar input {
+  width: 296px;
+  height: 34px;
+  border-radius: 17px;
+  border: 0px;
+  background: url("../images/zoom.png") 265px center no-repeat
+    rgba(255, 255, 255, 0.75);
+  text-indent: 25px;/* 输入栏段落缩进 */
+  outline: none;
+ 
+}
+
+.playbox_con{
+	height: 435px;
+	background-color: rgba(255, 255, 255, 0.5);
+	display: flex;
+	position: relative;
+}
+.song_list {
+  width: 100%;
+  overflow-y: auto; /*溢出滚动auto*/
+  overflow-x: hidden;
+  height: 100%;
+}
+
+.song_list::-webkit-scrollbar {
+  display: none;
+}
+.song_list li{
+  text-align: left;
+  border-bottom: solid 1px black;
+  border-right: solid 1px black;
+  height: 35px;
+  width: 260px;
+  font-weight: bold;
+  color: #333;
+  padding-top: 5px;
+  text-indent: 15px;
+  font-size: 12px;
+}
+.song_list li:hover{
+  cursor: pointer;
+}
+
+.musicInfo {
+  width: 540px;
+  height: auto;
+  display: flex;
+  align-items:flex-end
+}
+
+#playBar {
+  width: 340px; 
+}
+
+.comment_wrapper {
+  width: 180px;
+  height: 435px;
+  list-style: none;
+  position: absolute;
+  left: 600px;
+  top: 0px;
+  padding: 25px 10px;
+}
+.comment_wrapper .title {
+  position: absolute;
+  top: 0;
+  margin-top: 10px;
+}
+.comment_wrapper .comment_list {
+  overflow: auto;
+  height: 410px;
+}
+.comment_wrapper .comment_list::-webkit-scrollbar {
+  display: none;
+}
+.comment_wrapper dl {
+  padding-top: 10px;
+  padding-left: 55px;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.comment_wrapper dt {
+  position: absolute;
+  left: 4px;
+  top: 10px;
+}
+
+.comment_wrapper dt img {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+}
+
+.comment_wrapper dd {
+  font-size: 12px;
+}
+
+.comment_wrapper .name {
+  font-weight: bold;
+  color: #333;
+  padding-top: 5px;
+}
+
+.comment_wrapper .detail {
+  color: #666;
+  margin-top: 5px;
+  line-height: 18px;
+}
+
+.player_con {
+  width: auto;
+  height: 435px;
+  position: absolute;
+  left: 200px;
+  top: 0px;
+  background-color: red;
+}
+
+.disc {
+  position: absolute;
+  left: 73px;
+  top: 60px;
+  z-index: 9;
+}
+.cover {
+  position: absolute;
+  left: 125px;
+  top: 112px;
+  width: 150px;
+  height: 150px;
+  border-radius: 75px;
+  z-index: 8;
+}
+
+.mvButton{
+  width: 20px;
+  height: 20px;
+}
+
+.myaudio {
+  width: 800px;
+  height: 40px;
+  margin-top: 5px;
+  outline: none;
+  background-color: #f1f3f4;
+  border-top-left-radius: 10px; 
+  border-top-right-radius: 10px;
+}
+
+.info {
+  font-size: 50px;
+  width: 800px;
+}
+
+/* 旋转的动画 */
+@keyframes Rotate {
+  from {
+    transform: rotateZ(0);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+/* 旋转的类名 */
+.autoRotate {
+  animation-name: Rotate;
+  animation-iteration-count: infinite;
+  animation-play-state: paused;
+  animation-timing-function: linear;
+  animation-duration: 15s;
+}
+
+.musicInfo.playing .disc,
+.musicInfo.playing .cover {
+  animation-play-state: running;
+}
+
+.video_con video {
+  position: fixed;
+  width: 800px;
+  height: 546px;
+  left: 50%;
+  top: 50%;
+  margin-top: -273px;
+  transform: translateX(-50%);
+  z-index: 990;
+}
+.video_con .mask {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 980;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+
